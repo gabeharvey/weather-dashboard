@@ -1,15 +1,17 @@
 body {
-    height: 100vh;
+    height: 99vh;
 }
 
 h1 {
     display: flex;
     justify-content: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
     color: white;
-    background-image: linear-gradient(to right, black, darkgray);
+    background-image: linear-gradient(to top, royalblue, skyblue);
     height: 3rem;
-    text-shadow: 2px 2px 2px white;
+    width: 99vw;
+    text-shadow: 1px 1px 1px white;
 }
 
 .today {
@@ -19,8 +21,64 @@ h1 {
     align-items: center;
     padding: 1rem;
     width: 15rem;
-    background-image: linear-gradient(to right, black, darkgray);
+    background-image: linear-gradient(to top, royalblue, skyblue);
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-shadow: 1px 1px 1px white;
+}
+
+.fiveDayForecast {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 99vw;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px white;
+}
+
+.day1 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: auto;
+    padding: .3rem;
+    background-image: linear-gradient(to top, royalblue, skyblue);
+}
+
+.day2 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: auto;
+    padding: .3rem;
+    background-image: linear-gradient(to top, royalblue, skyblue);
+}
+
+.day3 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: auto;
+    padding: .3rem;
+    background-image: linear-gradient(to top, royalblue, skyblue);
+}
+
+.day4 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: auto;
+    padding: .3rem;
+    background-image: linear-gradient(to top, royalblue, skyblue);
+}
+
+.day5 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: auto;
+    padding: .3rem;
+    background-image: linear-gradient(to top, royalblue, skyblue);
 }
