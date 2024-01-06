@@ -18,6 +18,27 @@ h1 {
     border-radius: 10px 10px 10px 10px;
 }
 
+.userSearch {
+    border: none;
+    outline: none;
+    padding: .5em;
+    border-radius: 10px 10px 10px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.button {
+    border: none;
+    padding: .5em;
+    height: 3.1em;
+    border-radius: 20px 20px 20px 20px;
+    background-color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: lightseagreen;
+}
+
 h2 {
     display: flex;
     justify-content: center;
