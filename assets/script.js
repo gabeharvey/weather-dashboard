@@ -35,6 +35,33 @@ document.querySelector(".search button").addEventListener("click", function () {
 
 currentWeather.fetchCurrentWeather("San Antonio");
 
+let fiveDay = {
+    "apiKey": "1537989417a206bbfd99a59f933ea9d1",
+    fetchFiveDay: function (city) {
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + this.apiKey
+        ).then((response) => response.json())
+        .then((data) => this.displayFiveDay(data));
+    },
+    displayFiveDay: function(data) {
+        const {icon} = data.list[0].weather[0];
+        const {temp, humidity} = data.list[0].main;
+        const {speed} = data.list[0].wind;
+        document.querySelector(".day1Temp").innerText = temp + "°F";
+        document.querySelector(".day1Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day1Humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".day1WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
+    },
+    search: function () {
+        this.fetchFiveDay(document.querySelector(".userSearch").value);
+    }
+};
+
+document.querySelector(".search button").addEventListener("click", function () {
+    fiveDay.search();
+});
+
+fiveDay.fetchFiveDay("San Antonio");
+
 setInterval (function() {
     $(".currentDate").text(currentDay.format("dddd, MM/DD/YYYY"));
   }, 1000);
