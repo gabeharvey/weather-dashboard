@@ -17,15 +17,23 @@ let currentWeather = {
         const {icon, description} = data.weather[0];
         const {temp, humidity} = data.main;
         const {speed} = data.wind;
-        console.log(name,icon,description,temp,humidity,speed)
         document.querySelector(".city").innerText = name + " Weather";
         document.querySelector(".currentTemp").innerText = temp + "°F";
         document.querySelector(".currentWeatherIcon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".currentDescription").innerText = description;
         document.querySelector(".currentHumidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".currentWindSpeed").innerText = "Wind Speed: " + speed + " MPH";
+    },
+    search: function () {
+        this.fetchCurrentWeather(document.querySelector(".userSearch").value);
     }
 };
+
+document.querySelector(".search button").addEventListener("click", function () {
+    currentWeather.search();
+});
+
+currentWeather.fetchCurrentWeather("San Antonio");
 
 setInterval (function() {
     $(".currentDate").text(currentDay.format("dddd, MM/DD/YYYY"));
