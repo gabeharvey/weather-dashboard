@@ -35,7 +35,7 @@ document.querySelector(".search button").addEventListener("click", function () {
 
 currentWeather.fetchCurrentWeather("San Antonio");
 
-let fiveDay = {
+let fiveDay1 = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchFiveDay: function (city) {
         fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + this.apiKey
@@ -43,9 +43,9 @@ let fiveDay = {
         .then((data) => this.displayFiveDay(data));
     },
     displayFiveDay: function(data) {
-        const {icon} = data.list[0].weather[0];
-        const {temp, humidity} = data.list[0].main;
-        const {speed} = data.list[0].wind;
+        const {icon} = data.list[2].weather[0];
+        const {temp, humidity} = data.list[2].main;
+        const {speed} = data.list[2].wind;
         document.querySelector(".day1Temp").innerText = temp + "°F";
         document.querySelector(".day1Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
         document.querySelector(".day1Humidity").innerText = "Humidity: " + humidity + "%";
@@ -57,10 +57,118 @@ let fiveDay = {
 };
 
 document.querySelector(".search button").addEventListener("click", function () {
-    fiveDay.search();
+    fiveDay1.search();
 });
 
-fiveDay.fetchFiveDay("San Antonio");
+fiveDay1.fetchFiveDay("San Antonio");
+
+let fiveDay2 = {
+    "apiKey": "1537989417a206bbfd99a59f933ea9d1",
+    fetchFiveDay: function (city) {
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + this.apiKey
+        ).then((response) => response.json())
+        .then((data) => this.displayFiveDay(data));
+    },
+    displayFiveDay: function(data) {
+        const {icon} = data.list[10].weather[0];
+        const {temp, humidity} = data.list[10].main;
+        const {speed} = data.list[10].wind;
+        document.querySelector(".day2Temp").innerText = temp + "°F";
+        document.querySelector(".day2Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day2Humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".day2WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
+    },
+    search: function () {
+        this.fetchFiveDay(document.querySelector(".userSearch").value);
+    }
+};
+
+document.querySelector(".search button").addEventListener("click", function () {
+    fiveDay2.search();
+});
+
+fiveDay2.fetchFiveDay("San Antonio");
+
+let fiveDay3 = {
+    "apiKey": "1537989417a206bbfd99a59f933ea9d1",
+    fetchFiveDay: function (city) {
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + this.apiKey
+        ).then((response) => response.json())
+        .then((data) => this.displayFiveDay(data));
+    },
+    displayFiveDay: function(data) {
+        const {icon} = data.list[18].weather[0];
+        const {temp, humidity} = data.list[18].main;
+        const {speed} = data.list[18].wind;
+        document.querySelector(".day3Temp").innerText = temp + "°F";
+        document.querySelector(".day3Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day3Humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".day3WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
+    },
+    search: function () {
+        this.fetchFiveDay(document.querySelector(".userSearch").value);
+    }
+};
+
+document.querySelector(".search button").addEventListener("click", function () {
+    fiveDay3.search();
+});
+
+fiveDay3.fetchFiveDay("San Antonio");
+
+let fiveDay4 = {
+    "apiKey": "1537989417a206bbfd99a59f933ea9d1",
+    fetchFiveDay: function (city) {
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + this.apiKey
+        ).then((response) => response.json())
+        .then((data) => this.displayFiveDay(data));
+    },
+    displayFiveDay: function(data) {
+        const {icon} = data.list[26].weather[0];
+        const {temp, humidity} = data.list[26].main;
+        const {speed} = data.list[26].wind;
+        document.querySelector(".day4Temp").innerText = temp + "°F";
+        document.querySelector(".day4Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day4Humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".day4WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
+    },
+    search: function () {
+        this.fetchFiveDay(document.querySelector(".userSearch").value);
+    }
+};
+
+document.querySelector(".search button").addEventListener("click", function () {
+    fiveDay4.search();
+});
+
+fiveDay4.fetchFiveDay("San Antonio");
+
+let fiveDay5 = {
+    "apiKey": "1537989417a206bbfd99a59f933ea9d1",
+    fetchFiveDay: function (city) {
+        fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=imperial&appid=" + this.apiKey
+        ).then((response) => response.json())
+        .then((data) => this.displayFiveDay(data));
+    },
+    displayFiveDay: function(data) {
+        const {icon} = data.list[34].weather[0];
+        const {temp, humidity} = data.list[34].main;
+        const {speed} = data.list[34].wind;
+        document.querySelector(".day5Temp").innerText = temp + "°F";
+        document.querySelector(".day5Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day5Humidity").innerText = "Humidity: " + humidity + "%";
+        document.querySelector(".day5WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
+    },
+    search: function () {
+        this.fetchFiveDay(document.querySelector(".userSearch").value);
+    }
+};
+
+document.querySelector(".search button").addEventListener("click", function () {
+    fiveDay5.search();
+});
+
+fiveDay5.fetchFiveDay("San Antonio");
 
 setInterval (function() {
     $(".currentDate").text(currentDay.format("dddd, MM/DD/YYYY"));
