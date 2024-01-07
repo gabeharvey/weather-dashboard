@@ -17,6 +17,7 @@ h1 {
     width: 98vw;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
+    opacity: .7;
 }
 
 .userSearch {
@@ -60,6 +61,7 @@ h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border-radius: 20px 20px 20px 20px;
     box-shadow: 10px 10px 10px white;
+    opacity: .9;
 }
 
 .currentDescription {
@@ -77,6 +79,7 @@ h3 {
     width: 98vw;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
+    opacity: .7;
 }
 
 .fiveDayForecast {
@@ -98,6 +101,7 @@ h3 {
     background-image: linear-gradient(to bottom, midnightblue, royalblue);
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
+    opacity: .9;
 }
 
 .day1Icon {
@@ -134,6 +138,7 @@ h3 {
     background-image: linear-gradient(to bottom, midnightblue, royalblue);
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
+    opacity: .9;
 }
 
 .day3 {
@@ -145,6 +150,7 @@ h3 {
     background-image: linear-gradient(to bottom, midnightblue, royalblue);
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
+    opacity: .9;
 }
 
 .day4 {
@@ -156,6 +162,7 @@ h3 {
     background-image: linear-gradient(to bottom, midnightblue, royalblue);
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
+    opacity: .9;
 }
 
 .day5 {
@@ -167,4 +174,5 @@ h3 {
     background-image: linear-gradient(to bottom, midnightblue, royalblue);
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
+    opacity: .9;
 }
