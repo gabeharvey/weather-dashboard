@@ -51,11 +51,12 @@ let fiveDay1 = {
         .then((data) => this.displayFiveDay(data));
     },
     displayFiveDay: function(data) {
-        const {icon} = data.list[2].weather[0];
+        const {icon, description} = data.list[2].weather[0];
         const {temp, humidity} = data.list[2].main;
         const {speed} = data.list[2].wind;
         document.querySelector(".day1Temp").innerText = Math.round(temp) + "°F";
         document.querySelector(".day1Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day1Description").innerText = description;
         document.querySelector(".day1Humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".day1WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
     },
@@ -86,11 +87,12 @@ let fiveDay2 = {
         .then((data) => this.displayFiveDay(data));
     },
     displayFiveDay: function(data) {
-        const {icon} = data.list[10].weather[0];
+        const {icon, description} = data.list[10].weather[0];
         const {temp, humidity} = data.list[10].main;
         const {speed} = data.list[10].wind;
         document.querySelector(".day2Temp").innerText = Math.round(temp) + "°F";
         document.querySelector(".day2Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day2Description").innerText = description;
         document.querySelector(".day2Humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".day2WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
     },
@@ -121,11 +123,12 @@ let fiveDay3 = {
         .then((data) => this.displayFiveDay(data));
     },
     displayFiveDay: function(data) {
-        const {icon} = data.list[18].weather[0];
+        const {icon, description} = data.list[18].weather[0];
         const {temp, humidity} = data.list[18].main;
         const {speed} = data.list[18].wind;
         document.querySelector(".day3Temp").innerText = Math.round(temp) + "°F";
         document.querySelector(".day3Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day3Description").innerText = description;
         document.querySelector(".day3Humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".day3WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
     },
@@ -156,11 +159,12 @@ let fiveDay4 = {
         .then((data) => this.displayFiveDay(data));
     },
     displayFiveDay: function(data) {
-        const {icon} = data.list[26].weather[0];
+        const {icon, description} = data.list[26].weather[0];
         const {temp, humidity} = data.list[26].main;
         const {speed} = data.list[26].wind;
         document.querySelector(".day4Temp").innerText = Math.round(temp) + "°F";
         document.querySelector(".day4Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day4Description").innerText = description;
         document.querySelector(".day4Humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".day4WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
     },
@@ -191,11 +195,12 @@ let fiveDay5 = {
         .then((data) => this.displayFiveDay(data));
     },
     displayFiveDay: function(data) {
-        const {icon} = data.list[34].weather[0];
+        const {icon, description} = data.list[34].weather[0];
         const {temp, humidity} = data.list[34].main;
         const {speed} = data.list[34].wind;
         document.querySelector(".day5Temp").innerText = Math.round(temp) + "°F";
         document.querySelector(".day5Icon").src = "https://openweathermap.org/img/wn/" + icon + ".png";
+        document.querySelector(".day5Description").innerText = description;
         document.querySelector(".day5Humidity").innerText = "Humidity: " + humidity + "%";
         document.querySelector(".day5WindSpeed").innerText = "Wind Speed: " + speed + " MPH";
     },

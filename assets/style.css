@@ -90,6 +90,11 @@ h2 {
     opacity: .75;
 }
 
+.currentWeatherIcon {
+    height: 40px;
+    width: 40px;
+}
+
 .currentDescription {
     text-transform: capitalize;
 }
@@ -146,14 +151,13 @@ h3 {
     opacity: .75;
 }
 
-.currentWeatherIcon {
-    height: 25px;
-    width: 25px;
+.day1Icon {
+    height: 40px;
+    width: 40px;
 }
 
-.day1Icon {
-    height: 25px;
-    width: 25px;
+.day1Description {
+    text-transform: capitalize;
 }
 
 .day2 {
@@ -169,8 +173,12 @@ h3 {
 }
 
 .day2Icon {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
+}
+
+.day2Description {
+    text-transform: capitalize;
 }
 
 .day3 {
@@ -186,8 +194,12 @@ h3 {
 }
 
 .day3Icon {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
+}
+
+.day3Description {
+    text-transform: capitalize;
 }
 
 .day4 {
@@ -203,8 +215,12 @@ h3 {
 }
 
 .day4Icon {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
+}
+
+.day4Description {
+    text-transform: capitalize;
 }
 
 .day5 {
@@ -220,8 +236,12 @@ h3 {
 }
 
 .day5Icon {
-    height: 25px;
-    width: 25px;
+    height: 40px;
+    width: 40px;
+}
+
+.day5Description {
+    text-transform: capitalize;
 }
 
 footer {
