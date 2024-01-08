@@ -29,6 +29,7 @@ h1 {
 }
 
 .button {
+    margin-top: 5px;
     border: none;
     padding: .5em;
     height: 3.1em;
@@ -49,11 +50,33 @@ h2 {
     color: white;
 }
 
+.mainDisplay {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98vw;
+    justify-content: space-between;
+}
+
 .today {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1rem;
+    width: 15rem;
+    background-image: linear-gradient(to bottom, midnightblue, royalblue);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 10px 10px white;
+    opacity: .9;
+}
+
+.currentWeather {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: left;
+    margin-top: 5px;
     padding: 1rem;
     width: 15rem;
     background-image: linear-gradient(to bottom, midnightblue, royalblue);
@@ -66,6 +89,22 @@ h2 {
 
 .currentDescription {
     text-transform: capitalize;
+}
+
+.searchRes {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1rem;
+    width: 15rem;
+    margin-top: 5px;
+    background-image: linear-gradient(to bottom, midnightblue, royalblue);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 10px 10px 10px white;
+    opacity: .9;
 }
 
 h3 {
@@ -104,27 +143,12 @@ h3 {
     opacity: .9;
 }
 
+.currentWeatherIcon {
+    height: 25px;
+    width: 25px;
+}
+
 .day1Icon {
-    height: 25px;
-    width: 25px;
-}
-
-.day2Icon {
-    height: 25px;
-    width: 25px;
-}
-
-.day3Icon {
-    height: 25px;
-    width: 25px;
-}
-
-.day4Icon {
-    height: 25px;
-    width: 25px;
-}
-
-.day5Icon {
     height: 25px;
     width: 25px;
 }
@@ -141,6 +165,11 @@ h3 {
     opacity: .9;
 }
 
+.day2Icon {
+    height: 25px;
+    width: 25px;
+}
+
 .day3 {
     display: flex;
     flex-direction: column;
@@ -151,6 +180,11 @@ h3 {
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
     opacity: .9;
+}
+
+.day3Icon {
+    height: 25px;
+    width: 25px;
 }
 
 .day4 {
@@ -165,6 +199,11 @@ h3 {
     opacity: .9;
 }
 
+.day4Icon {
+    height: 25px;
+    width: 25px;
+}
+
 .day5 {
     display: flex;
     flex-direction: column;
@@ -175,4 +214,9 @@ h3 {
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 10px white;
     opacity: .9;
+}
+
+.day5Icon {
+    height: 25px;
+    width: 25px;
 }
