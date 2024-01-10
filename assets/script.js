@@ -34,13 +34,6 @@ document.querySelector(".search button").addEventListener("click", function () {
     currentWeather.search();
 });
 
-// enter key function for current day weather search //
-document.querySelector(".userSearch").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        currentWeather.search();
-    }
-});
-
 currentWeather.fetchCurrentWeather("San Antonio");
 
 let cityList = document.querySelector(".cityHistory");
@@ -52,7 +45,6 @@ let searchBtn = document.querySelector(".searchBtn");
 let userCity = [];
 function renderCity () {
     cityList.innerHTML = "";
-    cityCount.textContent = userCity.length;
     for (var i = 0; i < userCity.length; i++) {
         var city = userCity[i];
         let button = document.createElement("button");
@@ -70,14 +62,11 @@ function init() {
 }
 
 function storeCities () {
-    console.log(userCity);
-    console.log('userCITYs');
     localStorage.setItem("userCity", JSON.stringify(userCity));
 }
 
 searchBtn.addEventListener("click", function(event){
     event.preventDefault();
-    console.log("HELLO");
     let cityText = cityInput.value.trim();
     if (cityText === "") {
         return;
@@ -86,6 +75,12 @@ searchBtn.addEventListener("click", function(event){
     cityInput.value = "";
     storeCities();
     renderCity();
+    currentWeather.fetchCurrentWeather(cityText)
+        fiveDay1.fetchFiveDay(cityText)
+        fiveDay2.fetchFiveDay(cityText)
+        fiveDay3.fetchFiveDay(cityText)
+        fiveDay4.fetchFiveDay(cityText)
+        fiveDay5.fetchFiveDay(cityText) 
 });
 
 cityList.addEventListener("click", function(event) {
@@ -125,18 +120,6 @@ let fiveDay1 = {
     }
 };
 
-// click function for day1 weather search //
-document.querySelector(".search button").addEventListener("click", function () {
-    fiveDay1.search();
-});
-
-// enter key function for day1 weather search //
-document.querySelector(".userSearch").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        fiveDay1.search();
-    }
-});
-
 fiveDay1.fetchFiveDay("San Antonio");
 
 let fiveDay2 = {
@@ -160,18 +143,6 @@ let fiveDay2 = {
         this.fetchFiveDay(document.querySelector(".userSearch").value);
     }
 };
-
-// click function for day2 weather search //
-document.querySelector(".search button").addEventListener("click", function () {
-    fiveDay2.search();
-});
-
-// enter key function for day2 weather search //
-document.querySelector(".userSearch").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        fiveDay2.search();
-    }
-});
 
 fiveDay2.fetchFiveDay("San Antonio");
 
@@ -197,18 +168,6 @@ let fiveDay3 = {
     }
 };
 
-// click function for day3 weather search //
-document.querySelector(".search button").addEventListener("click", function () {
-    fiveDay3.search();
-});
-
-// enter key function for day3 weather search //
-document.querySelector(".userSearch").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        fiveDay3.search();
-    }
-});
-
 fiveDay3.fetchFiveDay("San Antonio");
 
 let fiveDay4 = {
@@ -233,18 +192,6 @@ let fiveDay4 = {
     }
 };
 
-// // click function for day4 weather search //
-document.querySelector(".search button").addEventListener("click", function () {
-    fiveDay4.search();
-});
-
-// enter key function for day4 weather search //
-document.querySelector(".userSearch").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        fiveDay4.search();
-    }
-});
-
 fiveDay4.fetchFiveDay("San Antonio");
 
 let fiveDay5 = {
@@ -268,18 +215,6 @@ let fiveDay5 = {
         this.fetchFiveDay(document.querySelector(".userSearch").value);
     }
 };
-
-// click function for day5 weather search //
-document.querySelector(".search button").addEventListener("click", function () {
-    fiveDay5.search();
-});
-
-// enter key function for day5 weather search //
-document.querySelector(".userSearch").addEventListener("keyup", function (event) {
-    if (event.key == "Enter") {
-        fiveDay5.search();
-    }
-});
 
 fiveDay5.fetchFiveDay("San Antonio");
 
