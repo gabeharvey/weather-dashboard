@@ -43,6 +43,66 @@ document.querySelector(".userSearch").addEventListener("keyup", function (event)
 
 currentWeather.fetchCurrentWeather("San Antonio");
 
+let cityList = document.querySelector(".cityHistory");
+let cityCount = document.querySelector(".cityCount");
+let cityInput = document.querySelector(".userSearch");
+let cityForm = document.querySelector(".search");
+let searchBtn = document.querySelector(".searchBtn");
+
+let userCity = [];
+function renderCity () {
+    cityList.innerHTML = "";
+    cityCount.textContent = userCity.length;
+    for (var i = 0; i < userCity.length; i++) {
+        var city = userCity[i];
+        let button = document.createElement("button");
+        button.textContent = city
+        cityList.appendChild(button);
+    }
+}
+
+function init() {
+    var storedCities = JSON.parse(localStorage.getItem("userCity"));
+    if (storedCities !== null) {
+        userCity = storedCities;
+    }
+    renderCity();
+}
+
+function storeCities () {
+    console.log(userCity);
+    console.log('userCITYs');
+    localStorage.setItem("userCity", JSON.stringify(userCity));
+}
+
+searchBtn.addEventListener("click", function(event){
+    event.preventDefault();
+    console.log("HELLO");
+    let cityText = cityInput.value.trim();
+    if (cityText === "") {
+        return;
+    }
+    userCity.push(cityText);
+    cityInput.value = "";
+    storeCities();
+    renderCity();
+});
+
+cityList.addEventListener("click", function(event) {
+    var element = event.target;
+    if (element.matches("button") === true) {
+        var city = element.textContent;
+        currentWeather.fetchCurrentWeather(city)
+        fiveDay1.fetchFiveDay(city)
+        fiveDay2.fetchFiveDay(city)
+        fiveDay3.fetchFiveDay(city)
+        fiveDay4.fetchFiveDay(city)
+        fiveDay5.fetchFiveDay(city) 
+    }
+});
+
+init();
+
 let fiveDay1 = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchFiveDay: function (city) {
