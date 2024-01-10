@@ -10,7 +10,7 @@ N/A
 
 ## Usage
 
-The user can enter a city into the city search box and obtain a current weather readout along with a 5 day forecast for a specific city. This can be done by entering any city name and clicking the search icon. Search Results are saved in Local Storage and user Search history is displayed in the form of buttons. These buttons can also perform searches for the user.
+The user can enter a city into the city search box and obtain a current weather readout along with a 5 day forecast for a specific city. This can be done by entering any city name and clicking the search icon. Search Results are saved in Local Storage and user search history is displayed in the form of buttons. These buttons can also perform searches for the user.
 
 ## Credits
 
@@ -20,13 +20,15 @@ Additional support and guidance provided by tutor Trinh Nguyen.
 
 Background Image Source: https://www.pexels.com/search/stars/
 
-Current Weather JavaScript Function Guidance: https://www.youtube.com/watch?v=WZNG8UomjSI
+Current Weather JavaScript Function Guidance: https://www.youtube.com/watch?v=WZNG8UomjSI by Jonah Lawrence
 
 ## Screenshot
 
 ![Alt text](./assets/images/weather-vision-screen.jpg)
 
 ## Link to Website
+
+https://gabeharvey.github.io/weather-dashboard/
 
 ## License
 
