@@ -24,7 +24,7 @@ Current Weather JavaScript Function Guidance: https://www.youtube.com/watch?v=WZ
 
 ## Screenshot
 
-![Alt text](./assets/images/weather-vision.jpg)
+![Alt text](./assets/images/weather-vision-screen.jpg)
 
 ## Link to Website
 
