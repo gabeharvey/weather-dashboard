@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Vision</title>
+    <!-- Link to CSS stylesheet -->
     <link rel="stylesheet" href="./assets/style.css">
     <!-- Link to DayJS -->
     <script
@@ -21,7 +22,9 @@
 <body>
     <h1>Weather Vision</h1>
     <div class="mainDisplay">
-        <div class="today">   
+        <!-- Main container of Website -->
+        <div class="today">
+            <!-- User City Search container -->   
             <div class="search">
                 <input type="text" class="userSearch" placeholder="City Search">
                 <div class="resButton"></div>
@@ -30,6 +33,7 @@
                 </svg></button>
                 </div>
             </div>
+            <!-- Current Weather Display -->
             <div class="currentWeather">
                 <h2 class="city">San Antonio Weather</h2>
                 <div class="currentDate">07/04/2023</div>
@@ -40,6 +44,7 @@
                 <div class="currentWindSpeed">Wind Speed: 5 MPH SSE</div>
                 <img src="" alt="" class="currentWeatherBox" /> 
             </div>
+            <!-- Search Results Display -->
             <div class="searchRes">
                 <h2 class="city">Search Results</h2>
                 <ul class="cityHistory"></ul>
@@ -47,7 +52,9 @@
         </div>
     </div>
     <h3>5 Day Forecast</h3>
+        <!-- Five Day Forecast Display area -->
         <div class="fiveDayForecast">
+            <!-- Day 1 of 5 day forecast display -->
             <div class="day1" id="five">
                 <div class="day1Date">07/05/2023</div>
                 <img src="" alt="" class="day1Icon" />
@@ -57,6 +64,7 @@
                 <div class="day1WindSpeed">Wind Speed: 3 MPH SSE</div>
                 <img src="" alt="" class="day1WeatherBox" />
             </div>
+            <!-- Day 2 of 5 day forecast display -->
             <div class="day2" id="five">
                 <div class="day2Date">07/06/2023</div>
                 <img src="" alt="" class="day2Icon" />
@@ -66,6 +74,7 @@
                 <div class="day2WindSpeed">Wind Speed: 4 MPH SSE</div>
                 <img src="" alt="" class="day2WeatherBox" />
             </div>
+            <!-- Day 3 of 5 day forecast display -->
             <div class="day3" id="five">
                 <div class="day3Date">07/07/2023</div>
                 <img src="" alt="" class="day3Icon" />
@@ -75,6 +84,7 @@
                 <div class="day3WindSpeed">Wind Speed: 2 MPH SSE</div>
                 <img src="" alt="" class="day3WeatherBox" />
             </div>
+            <!-- Day 4 of 5 day forecast display -->
             <div class="day4" id="five">
                 <div class="day4Date">07/08/2023</div>
                 <img src="" alt="" class="day4Icon" />
@@ -84,6 +94,7 @@
                 <div class="day4WindSpeed">Wind Speed: 2 MPH SSE</div>
                 <img src="" alt="" class="day4WeatherBox" />
             </div>
+            <!-- Day 5 of 5 day forecast display -->
             <div class="day5" id="five">
                 <div class="day5Date">07/09/2023</div>
                 <img src="" alt="" class="day5Icon" />
@@ -94,7 +105,9 @@
                 <img src="" alt="" class="day5WeatherBox" />
             </div>
         </div>
+    <!-- Footer section of website -->
     <footer class="closing">⭐ Thank you for Looking ⭐ &copy 2024</footer>
+    <!-- Link to JavaScript file -->
     <script src="./assets/script.js"></script>
 </body>
 </html>

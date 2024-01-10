@@ -5,6 +5,8 @@ let dayPlus2 = currentDay.add(2, 'day');
 let dayPlus3 = currentDay.add(3, 'day');
 let dayPlus4 = currentDay.add(4, 'day');
 let dayPlus5 = currentDay.add(5, 'day');
+
+// current weather API functions //
 let currentWeather = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchCurrentWeather: function (city) {
@@ -34,15 +36,20 @@ document.querySelector(".search button").addEventListener("click", function () {
     currentWeather.search();
 });
 
+// initial weather display //
 currentWeather.fetchCurrentWeather("San Antonio");
 
+// variables for search history and local storage functions //
 let cityList = document.querySelector(".cityHistory");
 let cityCount = document.querySelector(".cityCount");
 let cityInput = document.querySelector(".userSearch");
 let cityForm = document.querySelector(".search");
 let searchBtn = document.querySelector(".searchBtn");
 
+// local storage array //
 let userCity = [];
+
+// create search result buttons function //
 function renderCity () {
     cityList.innerHTML = "";
     for (var i = 0; i < userCity.length; i++) {
@@ -53,6 +60,7 @@ function renderCity () {
     }
 }
 
+// local storage functions //
 function init() {
     var storedCities = JSON.parse(localStorage.getItem("userCity"));
     if (storedCities !== null) {
@@ -65,6 +73,7 @@ function storeCities () {
     localStorage.setItem("userCity", JSON.stringify(userCity));
 }
 
+// display current weather and 5 day forecast function for user entry click //
 searchBtn.addEventListener("click", function(event){
     event.preventDefault();
     let cityText = cityInput.value.trim();
@@ -83,6 +92,7 @@ searchBtn.addEventListener("click", function(event){
         fiveDay5.fetchFiveDay(cityText) 
 });
 
+// display current weather and 5 day forecast function for cities in search history buttons //
 cityList.addEventListener("click", function(event) {
     var element = event.target;
     if (element.matches("button") === true) {
@@ -98,6 +108,7 @@ cityList.addEventListener("click", function(event) {
 
 init();
 
+// API fetch function for day 1 of 5 day forecast //
 let fiveDay1 = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchFiveDay: function (city) {
@@ -122,6 +133,7 @@ let fiveDay1 = {
 
 fiveDay1.fetchFiveDay("San Antonio");
 
+// API fetch function for day 2 of 5 day forecast //
 let fiveDay2 = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchFiveDay: function (city) {
@@ -146,6 +158,7 @@ let fiveDay2 = {
 
 fiveDay2.fetchFiveDay("San Antonio");
 
+// API fetch function for day 3 of 5 day forecast //
 let fiveDay3 = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchFiveDay: function (city) {
@@ -170,6 +183,7 @@ let fiveDay3 = {
 
 fiveDay3.fetchFiveDay("San Antonio");
 
+// API fetch function for day 4 of 5 day forecast //
 let fiveDay4 = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchFiveDay: function (city) {
@@ -194,6 +208,7 @@ let fiveDay4 = {
 
 fiveDay4.fetchFiveDay("San Antonio");
 
+// API fetch function for day 5 of 5 day forecast //
 let fiveDay5 = {
     "apiKey": "1537989417a206bbfd99a59f933ea9d1",
     fetchFiveDay: function (city) {
