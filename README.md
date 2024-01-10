@@ -20,6 +20,8 @@ Additional support and guidance provided by tutor Trinh Nguyen.
 
 Background Image Source: https://www.pexels.com/search/stars/
 
+JavaScript debugging guidance provided by AskBCS Learning Assistant (username "ocskier" Jon)
+
 Current Weather JavaScript Function Guidance: https://www.youtube.com/watch?v=WZNG8UomjSI by Jonah Lawrence
 
 ## Screenshot
